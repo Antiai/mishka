@@ -1,0 +1,134 @@
+.company {
+  @media @mobileOnly {
+    padding-top: 27px;
+    padding-bottom: 21px;
+  }
+
+  @media @tabletOnly {
+    padding-top: 48px;
+    padding-bottom: 43px;
+  }
+
+  @media @desktop {
+    padding-top: 59px;
+    padding-bottom: 49px;
+  }
+
+  &__wrapper {
+    .center();
+
+    @media @mobileOnly {
+      padding-right: @mobileSideOffset;
+      padding-left: @mobileSideOffset;
+    }
+
+    @media @tabletOnly {
+      padding-right: @tabletSideOffset;
+      padding-left: @tabletSideOffset;
+    }
+
+    @media @desktop {
+      padding-right: @desktopSideOffset;
+      padding-left: (@desktopSideOffset + @desktopOffset);
+    }
+  }
+
+  &__title {
+    .set-caption-font-size();
+
+    margin-top: 0;
+
+    @media @mobileOnly {
+      margin-bottom: 17px;
+    }
+
+    @media @tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__features {
+    font-weight: bold;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    @media @mobileIntermediate {
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__feature {
+    position: relative;
+    padding-top: 70px;
+
+    @media @mobileOnly {
+      margin-bottom: 13px;
+    }
+
+    @media @mobileIntermediateTablet {
+      width: 50%;
+    }
+
+    @media @tablet {
+      margin-bottom: 37px;
+    }
+
+    @media @desktop {
+      width: 39.9%;
+    }
+
+    &--order-1 {
+      @media @mobileIntermediate {
+        order: 1;
+      }
+    }
+
+    &--order-2 {
+      @media @mobileIntermediate {
+        order: 2;
+      }
+    }
+  }
+
+  &__feature-content {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media @mobileOnly {
+      font-size: 17px;
+      line-height: 20px;
+    }
+
+    @media @mobileIntermediate {
+      padding-right: 20px;
+    }
+
+    @media @tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @media @desktop {
+      padding-right: 30px;
+    }
+  }
+
+  &__feature-icon {
+    position: absolute;
+    left: 24px;
+    display: block;
+    fill: @iconCompanyFill;
+    transform: translateX(-50%) translateY(-50%);
+
+    @media @mobileOnly {
+      top: 33px;
+    }
+
+    @media @tablet {
+      top: 35px;
+    }
+  }
+}

@@ -1,0 +1,245 @@
+.contacts {
+  @media @mobileOnly {
+    padding-top: 35px;
+    padding-bottom: 39px;
+  }
+
+  @media @tabletOnly {
+    padding-top: 44px;
+    padding-bottom: 59px;
+  }
+
+  @media @desktop {
+    padding-top: 129px;
+    padding-bottom: 106px;
+  }
+
+  &__container {
+    .center();
+
+    @media @desktop {
+      position: relative;
+      padding-right: @desktopSideOffset;
+      padding-left: @desktopSideOffset;
+    }
+  }
+
+  &__wrapper {
+    @media @mobileOnly {
+      padding-right: @mobileSideOffset;
+      padding-left: @mobileSideOffset;
+    }
+
+    @media @tabletOnly {
+      justify-content: space-between;
+      padding-right: @tabletSideOffset;
+      padding-left: @tabletSideOffset;
+    }
+
+    @media @tablet {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    @media @desktop {
+      padding-right: 50%;
+      padding-left: @desktopOffset;
+    }
+
+    &--align-top {
+      @media @tablet {
+        align-items: flex-start;
+      }
+
+      @media @desktop {
+        padding-right: 54%;
+      }
+    }
+
+    &--no-padding {
+      @media @desktop {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__icon-container {
+    @media @mobileOnly {
+      display: none;
+    }
+
+    @media @desktop {
+      width: @desktopOffset;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+
+    @media @mobileOnly {
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 25px;
+    }
+
+    @media @tabletOnly {
+      font-size: 43px;
+      line-height: 50px;
+    }
+
+    @media @tablet {
+      margin-bottom: 0;
+    }
+
+    @media @desktop {
+      font-size: 53px;
+      line-height: 57px;
+      order: 1;
+    }
+  }
+
+  &__icon {
+    display: block;
+
+    @media @desktop {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__items {
+    line-height: 30px;
+    display: flex;
+    align-items: flex-start;
+
+    @media @mobileOnly {
+      font-size: 15px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    @media @tabletOnly {
+      width: 50%;
+      margin-top: 33px;
+    }
+
+    @media @tablet {
+      font-size: 17px;
+    }
+
+    @media @desktop {
+      margin-top: 37px;
+    }
+
+    &:nth-child(2) {
+      @media @desktop {
+        margin-top: 29px;
+      }
+    }
+  }
+
+  &__item {
+    min-width: 77px;
+    margin: 0;
+  }
+
+  &__content {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: inherit;
+
+    @media @mobileOnly {
+      font-size: 15px;
+      line-height: 30px;
+    }
+
+    @media @tablet {
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &--link {
+      transition: border-bottom-color 200ms ease-out,
+      color 200ms ease-out;
+      border-bottom-color: @linkContactsEmailBorder;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+
+      &:hover {
+        color: @linkContactsEmailTextHover;
+        border-bottom-color: @linkContactsEmailBorderHover;
+      }
+
+      &:active {
+        color: fade(@linkContactsEmailTextActive, 30%);
+        border-bottom-color: fade(@linkContactsEmailBorderActive, 10%);
+      }
+    }
+  }
+
+  &__location {
+    min-width: 320px;
+
+    @media @desktop {
+      position: absolute;
+      top: -58px;
+      right: @desktopSideOffset;
+      left: 50%;
+    }
+  }
+
+  &__map {
+    // min-width: 320px;
+    height: 457px;
+    background-color: @veryLightGrayLighter;
+    background-repeat: no-repeat;
+
+    @media @mobileOnly {
+      background-image: url("../img/icons/icon-map-pin.svg"),
+      url("../img/maps/map-mobile@1x.jpg");
+      margin-top: 37px;
+      background-position: 48.8% 46.3%, top center;
+    }
+
+    @media @tabletOnly {
+      background-image: url("../img/icons/icon-map-pin.svg"),
+      url("../img/maps/map-tablet@1x.jpg");
+      margin-top: 56px;
+      background-position: 49.4% 46.7%, top center;
+    }
+
+    @media @desktop {
+      // position: absolute;
+      // top: -58px;
+      // right: @desktopSideOffset;
+      // left: 50%;
+      background-image: url("../img/icons/icon-map-pin.svg"),
+      url("../img/maps/map-desktop@1x.jpg");
+      background-position: 51.4% 46.9%, top center;
+    }
+  }
+
+  &__btn {
+    .btn();
+
+    @media @mobileOnly {
+      margin-top: 39px;
+    }
+
+    @media @tablet {
+      width: 230px;
+      margin-right: auto;
+    }
+
+    @media @tabletOnly {
+      margin-top: 56px;
+      margin-left: auto;
+    }
+
+    @media @desktop {
+      margin-top: 79px;
+    }
+  }
+}

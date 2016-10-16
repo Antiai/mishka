@@ -1,0 +1,98 @@
+.form-cart {
+  &__fieldset {
+    border: none;
+    font-size: 0;
+    margin-bottom: 31px;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__legend {
+    color: @formText;
+    line-height: 30px;
+    text-align: center;
+
+    @media @mobileOnly {
+      font-size: 15px;
+      margin-bottom: 23px;
+    }
+
+    @media @tablet {
+      font-size: 17px;
+      margin-bottom: 21px;
+    }
+  }
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__select {
+    display: none;
+    &:checked + label {
+      border-color: @formSizeCheckedBorder;
+    }
+  }
+
+  &__label {
+    .btn();
+
+    border-color: fade(@formSizeBorder, 10%);
+    color: @formText;
+    transition: border-color 200ms ease-out;
+
+    &:hover {
+      background-color: @formSizeSelectBackgroundHover;
+      color: @formSizeSelectTextColorHover;
+      border-color: fade(@formSizeBorder, 30%);
+    }
+
+    &:active {
+      background-color: @formSizeSelectBackgroundActive;
+      color: @formSizeSelectTextColorActive;
+      border-color: @formSizeCheckedBorder;
+    }
+
+    @media @mobileOnly {
+      width: 31.16%;
+    }
+
+    @media @tablet {
+      width: 32%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+
+  &__btn {
+    .btn();
+
+    background-color: @btnCartAddBackground;
+    border: none;
+    color: @btnCartAddText;
+    min-height: 52px;
+    width: 100%;
+    transition: background-color 200ms ease-out,
+    color 200ms ease-out;
+    position: relative;
+
+    &:hover {
+      background-color: @btnCartAddBackgroundHover;
+      color: @btnCartAddTextHover;
+
+      &::after {
+        left: 0;
+        background-color: @btnCartAddBackgroundHover;
+      }
+    }
+
+    &:active {
+      background-color: @btnCartAddBackgroundHover;
+      color: fade(@btnCartAddTextActive, 30%);
+    }
+  }
+}

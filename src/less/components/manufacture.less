@@ -1,0 +1,222 @@
+.manufacture {
+  transition: box-shadow 200ms ease-out;
+  box-shadow: inset 1px 1px @catalogBorder,
+  inset -1px -1px @catalogBorder;
+
+  &:hover {
+    box-shadow: inset 1px 1px @catalogBorder,
+    inset -1px -1px @catalogBorder,
+    0 6px 10px fade(@linkCatalogShadowHover, 10%);
+  }
+
+  &:active {
+    box-shadow: inset 1px 1px @catalogBorder,
+    inset -1px -1px @catalogBorder,
+    0 3px 5px fade(@linkCatalogShadowActive, 10%);
+  }
+
+  @media @mobileOnly {
+    padding-bottom: 33px;
+  }
+
+  @media @tabletOnly {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 46px;
+  }
+
+  @media @desktop {
+    position: relative;
+    width: 100%;
+    min-height: 455px;
+    margin-bottom: 57px;
+    padding-top: 42px;
+    padding-left: 682px;
+  }
+
+  &__wrapper {
+    @media @mobileOnly {
+      padding-right: 34px;
+      padding-left: 34px;
+    }
+
+    @media @tabletOnly {
+      order: 1;
+      padding-right: 42px;
+      padding-left: 42px;
+    }
+
+    @media @desktop {
+      min-width: 230px;
+      margin-right: 57px;
+      margin-left: 78px;
+    }
+
+    &--caption {
+      @media @mobileOnly {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 96px;
+        padding-right: 0;
+      }
+
+      @media @tabletOnly {
+        display: flex;
+        align-items: center;
+        margin-bottom: 28px;
+        padding-top: 34px;
+        box-shadow: inset 0 1px @catalogBorder;
+      }
+
+      @media @desktop {
+        margin-bottom: 33px;
+      }
+    }
+  }
+
+  &__title {
+    line-height: 24px;
+    display: block;
+
+    @media @mobileOnly {
+      font-size: 17px;
+      width: 170px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 24px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @media @tabletOnly {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 33px;
+    }
+
+    @media @tablet {
+      font-size: 20px;
+    }
+
+    @media @desktop {
+      margin-top: 22px;
+    }
+  }
+
+  &__video {
+    .center();
+
+    background-color: @veryLightGrayLighter;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media @mobileOnly {
+      position: relative;
+      min-height: 150px;
+      margin-bottom: 28px;
+      background-image: url("../img/video/video-mobile@1x.jpg");
+    }
+
+    @media @mobileOnlyRetina2x {
+      background-image: url("../img/video/video-mobile@2x.jpg");
+      background-size: 260px auto;
+    }
+
+    @media @tabletOnly {
+      position: relative;
+      width: 100%;
+      background-image: url("../img/video/video-tablet@1x.jpg");
+    }
+
+    @media @tabletOnlyRetina2x {
+      background-image: url("../img/video/video-tablet@2x.jpg");
+      background-size: 668px auto;
+    }
+
+    @media @tablet {
+      min-height: 455px;
+    }
+
+    @media @desktop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 682px;
+      background-image: url("../img/video/video-desktop@1x.jpg");
+    }
+
+    @media @desktopRetina2x {
+      background-image: url("../img/video/video-desktop@2x.jpg");
+      background-size: 682px auto;
+    }
+  }
+
+  &__play-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &__play {
+    display: block;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    transition: opacity 200ms ease-out,
+    transform 200ms ease-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
+  }
+
+  &__icon {
+    display: block;
+
+    &--video {
+      fill: @iconManufactureVideoFill;
+
+      @media @desktop {
+        margin-left: 2px;
+      }
+    }
+  }
+
+  &__description {
+    color: @txtContent;
+
+    @media @mobileOnly {
+      font-size: 13px;
+      line-height: 24px;
+      margin-bottom: 25px;
+    }
+
+    @media @tabletOnly {
+      margin-bottom: 35px;
+    }
+
+    @media @tablet {
+      font-size: 15px;
+      line-height: 30px;
+      margin-top: 0;
+    }
+
+    @media @desktop {
+      margin-bottom: 46px;
+    }
+  }
+
+  &__btn {
+    .btn();
+  }
+}

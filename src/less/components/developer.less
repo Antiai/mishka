@@ -1,0 +1,50 @@
+.developer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: @linkDeveloperText;
+
+  &:active span {
+    opacity: 0.3;
+  }
+
+  &:hover svg {
+    fill: @footerAcademyLogoFillHover;
+  }
+
+  &:active svg {
+    fill: @footerAcademyLogoFillActive;
+    opacity: 0.3;
+  }
+
+  @media @tablet {
+    width: 184px;
+  }
+
+  &__title {
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 19px;
+    margin-right: 30px;
+    transition: opacity 200ms ease-out;
+
+    @media @mobileOnly {
+      margin-bottom: 5px;
+    }
+
+    @media @tablet {
+      margin-left: auto;
+    }
+  }
+
+  &__logo {
+    fill: @footerAcademyLogoFill;
+    transition: fill 200ms ease-out,
+    opacity 200ms ease-out;
+
+    @media @tablet {
+      margin-top: 5px;
+    }
+  }
+}

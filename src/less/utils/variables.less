@@ -1,0 +1,76 @@
+// BREAKPOINTS
+@tabletWidth: 768px;
+@desktopWidth: 1150px;
+
+// bound variables
+@tabletBeforeWidth: (@tabletWidth - 1px);
+@desktopBeforeWidth: (@desktopWidth - 1px);
+
+// MEDIA CONDITIONS
+@tablet: ~"screen and (min-width: @{tabletWidth})";
+@desktop: ~"screen and (min-width: @{desktopWidth})";
+
+@mobileOnly: ~"screen and (max-width: @{tabletBeforeWidth})";
+@tabletOnly: ~"screen and (min-width: @{tabletWidth}) and (max-width: @{desktopBeforeWidth})";
+
+// intermediate media conditions
+@mobileIntermediate: ~"screen and (min-width: @{mobileIntermediateWidth})";
+@mobileIntermediateTablet: ~"screen and (min-width: @{mobileIntermediateWidth}) and (max-width: @{desktopBeforeWidth})";
+
+// RETINA CONDITIONS
+@mobileOnlyRetina2x: ~"@{mobileOnly} and (min-device-pixel-ratio: 2)",
+                                      ~"@{mobileOnly} and (min-resolution: 192dpi)";
+@tabletOnlyRetina2x: ~"@{tabletOnly} and (min-device-pixel-ratio: 2)",
+                                    ~"@{tabletOnly} and (min-resolution: 192dpi)";
+@tabletRetina2x: ~"@{tablet} and (min-device-pixel-ratio: 2)",
+                            ~"@{tablet} and (min-resolution: 192dpi)";
+@desktopRetina2x: ~"@{desktop} and (min-device-pixel-ratio: 2)",
+                                ~"@{desktop} and (min-resolution: 192dpi)";
+// key widths
+@minWidth: 320px;
+@maxWidth: 600px; //center mobile content
+@tabletMaxWidth: 900px; //center desktop content
+@desktopMaxWidth: 1200px;
+
+// intermediate breakpoints
+@mobileIntermediateWidth: (@minWidth * 2);
+
+// main menu heights and offset
+@menuItemMinHeight: 79px;
+@tabletMenuItemMinHeight: 89px;
+
+@tabletMenuItemVerticalOffset: -1*(@tabletMenuItemMinHeight);
+
+// catalog parts heights
+@catalogPartsMinHeight: 103px;
+@catalogPartsTabletMinHeight: 119px;
+
+// paddings
+@mobileSideOffset: 30px;
+@tabletSideOffset: 50px;
+@desktopSideOffset: 50px;
+
+// offsets
+@tabletOffset: 167px;
+@desktopOffset: 175px;
+
+// filter dimensions
+@mobileCheckBoxSize: 40px;
+@tabletCheckBoxSize: 52px;
+
+// #colors
+@white: #fff;
+@black: #000;
+@veryDarkRed: #221f1f;
+@verySoftRed: #f0b1b1;
+@darkGray: #444;
+@lightGray: #c6c6c6;
+@veryLightGrayDarker: #e5e5e5;
+@veryLightGray: #ececec;
+@veryLightGrayLighter: #f1f1f1;
+@veryLightGrayLighterLight: #f9f9f9;
+@darkCyan: #149080;
+@moderateCyanLighter: #46c1ae;
+@moderateCyan: #63d1bb;
+@moderateCyanDarkerLight: #59d5bc;
+@moderateCyanDarker: #56c3b2;

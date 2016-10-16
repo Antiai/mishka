@@ -1,0 +1,29 @@
+.catalog {
+  @media @mobileOnly {
+    padding-bottom: 58px;
+    padding-top: 30px;
+  }
+
+  @media @tabletOnly {
+    padding-bottom: 63px;
+    padding-top: 78px;
+  }
+
+  @media @desktop {
+    padding-bottom: 48px;
+    padding-top: 127px;
+  }
+
+  &__wrapper {
+    .center();
+    .set-wrapper-padding();
+
+    @media @desktop {
+      align-content: flex-start;
+      align-items: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+}

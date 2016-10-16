@@ -1,0 +1,34 @@
+.social {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 80px;
+  padding: 20px;
+  padding-bottom: 20px;
+
+  @media @tablet {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__link {
+    margin-left: 21px;
+    margin-right: 21px;
+    transition: fill 200ms ease-out,
+    opacity 200ms ease-out;
+
+    &:hover {
+      fill: @iconSocialFillHover;
+    }
+
+    &:active {
+      fill: @iconSocialFillActive;
+      opacity: 0.3;
+    }
+  }
+
+  &__icon {
+    display: block;
+    margin: auto;
+  }
+}
