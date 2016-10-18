@@ -2835,6 +2835,7 @@ body {
   .main-nav__item {
     z-index: 2;
     width: 100%;
+    min-width: 320px;
     min-height: 79px;
     padding-top: 27px;
     padding-bottom: 27px;
