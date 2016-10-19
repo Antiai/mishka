@@ -1505,7 +1505,7 @@ body {
   fill: #63d1bb;
   opacity: 1;
 }
-.form-order__text:enabled:invalid + label {
+.form-order__text:enabled:focus:invalid + label {
   fill: #000;
   opacity: 0.2;
 }
